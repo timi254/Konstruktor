@@ -1,0 +1,40 @@
+class Dijak {
+    String ime;
+    String priimek;
+    int letoVpisa;
+    String vpisnaSt;
+
+    Dijak(String i, String p, int lv, String vs){
+        this.ime=i;
+        this.priimek=p;
+        this.letoVpisa=lv;
+        this.vpisnaSt=vs;
+    }
+
+    Dijak(String i, String p, String vs){
+        this.ime=i;
+        this.priimek=p;
+        this.letoVpisa=2023;
+        this.vpisnaSt=vs;
+    }
+
+    Dijak(){};
+
+    void Izpis(){
+        System.out.println("Ime "+ime);
+        System.out.println("Priimek "+priimek);
+        System.out.println("Leto vpisa  "+letoVpisa);
+        System.out.println("Vpisna stevilka "+vpisnaSt);
+    }
+
+    public static void main(String[] args) {
+        Dijak Miha = new Dijak("Miha","Novak",2020,"12345");
+        Miha.Izpis();
+        System.out.println();
+        Dijak Peter = new Dijak("Peter","Kos","12345");
+        Peter.Izpis();
+        System.out.println();
+        Dijak Lovro = new Dijak();
+        Lovro.Izpis();
+    }
+}
